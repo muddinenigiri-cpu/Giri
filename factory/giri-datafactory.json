@@ -1,0 +1,15 @@
+{
+	"name": "giri-datafactory",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8b76cce7-bd2f-4589-8de6-a6bc6ef1999d",
+		"tenantId": "8d9ec0de-98a0-439c-b6d0-691924f7ff82"
+	}
+}
