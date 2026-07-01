@@ -1,0 +1,35 @@
+{
+	"name": "DelimitedText2_copy2_dynmic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Azure",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName2": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "ADLS"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().FileName2",
+					"type": "Expression"
+				},
+				"folderPath": "Ready",
+				"fileSystem": "giri"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
