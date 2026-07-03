@@ -5,7 +5,17 @@
 			{
 				"name": "CopyFile1",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Delete1",
+						"dependencyConditions": [
+							"Skipped",
+							"Completed",
+							"Failed",
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -73,7 +83,10 @@
 					{
 						"activity": "CopyFile1",
 						"dependencyConditions": [
-							"Succeeded"
+							"Succeeded",
+							"Failed",
+							"Completed",
+							"Skipped"
 						]
 					}
 				],
@@ -102,11 +115,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"NewFile": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
