@@ -1,0 +1,72 @@
+{
+	"name": "pl_1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.par1",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Wait2",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.par2",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Wait3",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.par3",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"par1": {
+				"type": "int",
+				"defaultValue": 3
+			},
+			"par2": {
+				"type": "int",
+				"defaultValue": 5
+			},
+			"par3": {
+				"type": "int",
+				"defaultValue": 7
+			}
+		},
+		"annotations": []
+	}
+}
