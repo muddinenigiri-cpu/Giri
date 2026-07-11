@@ -1,0 +1,27 @@
+{
+	"name": "exc_pl1",
+	"properties": {
+		"activities": [
+			{
+				"name": "exe_ac1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "wait",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"par1": 5
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
