@@ -1,6 +1,12 @@
 {
 	"name": "giri-datafactory",
 	"properties": {
+		"globalParameters": {
+			"G_pr1": {
+				"type": "int",
+				"value": 4
+			}
+		},
 		"trustModeClaimForMi": {
 			"value": "Disabled",
 			"editable": true
