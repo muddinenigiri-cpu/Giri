@@ -1,0 +1,25 @@
+{
+	"name": "pl_2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait_pl1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.par1",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"par1": {
+				"type": "int"
+			}
+		},
+		"annotations": []
+	}
+}
