@@ -6,13 +6,7 @@
 				"name": "Wait1",
 				"type": "Wait",
 				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"waitTimeInSeconds": {
-						"value": "@pipeline().parameters.par1",
-						"type": "Expression"
-					}
-				}
+				"userProperties": []
 			}
 		],
 		"parameters": {
