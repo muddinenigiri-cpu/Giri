@@ -15,7 +15,13 @@
 				"name": "If Condition1",
 				"type": "IfCondition",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@pipeline().parameters.par1",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
