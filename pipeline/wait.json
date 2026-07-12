@@ -6,6 +6,15 @@
 				"name": "Wait1",
 				"type": "Wait",
 				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
 				"userProperties": []
 			}
 		],
