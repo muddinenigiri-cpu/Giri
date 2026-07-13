@@ -2,7 +2,7 @@
 	"name": "Delimited_MetaData",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_Azure",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
