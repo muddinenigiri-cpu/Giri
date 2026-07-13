@@ -1,0 +1,116 @@
+{
+	"name": "set1",
+	"properties": {
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(variables('var1'),10)",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Wait2",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "If Condition1_copy1",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded",
+							"Skipped"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(variables('var1'),10)",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Wait2_copy1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Wait1_copy1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "If Condition1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var1",
+					"value": {
+						"value": "@int(11)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"var1": {
+				"type": "Integer",
+				"defaultValue": 10
+			}
+		},
+		"annotations": []
+	}
+}
