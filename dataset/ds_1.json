@@ -1,0 +1,29 @@
+{
+	"name": "ds_1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Micro.csv",
+				"folderPath": "Raw",
+				"fileSystem": "giri"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "MZ�\u0000\u0003\u0000\u0000\u0000\u0004\u0000\u0000\u0000��\u0000\u0000�\u0000\u0000\u0000\u0000\u0000\u0000\u0000@\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0000\u0000\u0000\u000e\u001f�\u000e\u0000�\t�!�\u0001L�!This program cannot be run in DOS mode.",
+				"type": "String"
+			}
+		]
+	}
+}
