@@ -2,7 +2,7 @@
 	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_Azure",
+			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
@@ -13,6 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "gk",
 				"folderPath": "Ready",
 				"fileSystem": "giri"
 			},
