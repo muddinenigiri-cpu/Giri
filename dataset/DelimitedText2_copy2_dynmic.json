@@ -1,10 +1,6 @@
 {
 	"name": "DelimitedText2_copy2_dynmic",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage1",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"FileName2": {
 				"type": "string"
