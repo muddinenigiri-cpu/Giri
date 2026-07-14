@@ -5,11 +5,11 @@
 		"factoryName": {
 			"value": "giri-datafactory"
 		},
-		"AzureDataLakeStorage1_accountKey": {
+		"AzureDataLakeStorageGen2_accountKey": {
 			"value": ""
 		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"value": "https://azurestorage7097.dfs.core.windows.net/"
+		"AzureDataLakeStorageGen2_properties_typeProperties_url": {
+			"value": "https://giristorageaccountgen2.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""
