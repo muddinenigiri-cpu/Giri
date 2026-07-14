@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Emp_data",
+				"fileName": "emp_data1",
 				"folderPath": "GiRi_Folder",
 				"fileSystem": "giri"
 			},
