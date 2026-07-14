@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Micro.csv",
-				"folderPath": "Raw",
+				"fileName": "Emp_data",
+				"folderPath": "GiRi_Folder",
 				"fileSystem": "giri"
 			},
 			"columnDelimiter": ",",
