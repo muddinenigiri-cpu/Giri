@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "emp_data1",
-				"folderPath": "GiRi_Folder",
+				"fileName": "employees.csv",
+				"folderPath": "GiRi_Folder/Folder2",
 				"fileSystem": "giri"
 			},
 			"columnDelimiter": ",",
