@@ -5,12 +5,20 @@
 			"referenceName": "AzureDataLakeStorageGen2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"cparm1": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Business",
+				"fileName": {
+					"value": "@dataset().cparm1",
+					"type": "Expression"
+				},
 				"folderPath": "GiRi_Folder/Folder2",
 				"fileSystem": "giri"
 			},
