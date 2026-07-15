@@ -8,7 +8,13 @@
 		"AzureDataLakeStorageGen2_accountKey": {
 			"value": ""
 		},
+		"get_meta_data_accountKey": {
+			"value": ""
+		},
 		"AzureDataLakeStorageGen2_properties_typeProperties_url": {
+			"value": "https://giristorageaccountgen2.dfs.core.windows.net/"
+		},
+		"get_meta_data_properties_typeProperties_url": {
 			"value": "https://giristorageaccountgen2.dfs.core.windows.net/"
 		},
 		"containerUri": {
