@@ -1,0 +1,29 @@
+{
+	"name": "get_meta",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "get_meta_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "emp_data1",
+				"folderPath": "GiRi_Folder",
+				"fileSystem": "giri"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "IF EXISTS(SELECT 1 FROM sys.tables WHERE object_id = OBJECT_ID('Employee'))",
+				"type": "String"
+			}
+		]
+	}
+}
