@@ -27,7 +27,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "get_meta",
+						"referenceName": "new_ds2",
 						"type": "DatasetReference"
 					}
 				}
@@ -51,7 +51,7 @@
 				"typeProperties": {
 					"variableName": "var1",
 					"value": {
-						"value": "@activity('Lookup1').output.firstRow",
+						"value": "@activity('Lookup1').output.firstRow.gender",
 						"type": "Expression"
 					}
 				}
