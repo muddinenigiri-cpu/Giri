@@ -8,11 +8,23 @@
 		"AzureDataLakeStorageGen2_accountKey": {
 			"value": ""
 		},
+		"AzureSQL_password": {
+			"value": ""
+		},
 		"get_meta_data_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorageGen2_properties_typeProperties_url": {
 			"value": "https://giristorageaccountgen2.dfs.core.windows.net/"
+		},
+		"AzureSQL_properties_typeProperties_server": {
+			"value": "giri.database.windows.net"
+		},
+		"AzureSQL_properties_typeProperties_database": {
+			"value": "GiRi@sql"
+		},
+		"AzureSQL_properties_typeProperties_userName": {
+			"value": "giriadmin"
 		},
 		"get_meta_data_properties_typeProperties_url": {
 			"value": "https://giristorageaccountgen2.dfs.core.windows.net/"
