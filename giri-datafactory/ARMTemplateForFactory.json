@@ -851,7 +851,7 @@
 						"dependsOn": [],
 						"userProperties": [],
 						"typeProperties": {
-							"waitTimeInSeconds": 60
+							"waitTimeInSeconds": 120
 						}
 					}
 				],
@@ -1339,6 +1339,13 @@
 			"properties": {
 				"annotations": [],
 				"runtimeState": "Stopped",
+				"pipeline": {
+					"pipelineReference": {
+						"referenceName": "trg2",
+						"type": "PipelineReference"
+					},
+					"parameters": {}
+				},
 				"type": "TumblingWindowTrigger",
 				"typeProperties": {
 					"frequency": "Minute",
@@ -1352,7 +1359,9 @@
 					"dependsOn": []
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/trg2')]"
+			]
 		}
 	]
 }
