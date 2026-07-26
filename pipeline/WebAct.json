@@ -1,0 +1,25 @@
+{
+	"name": "WebAct",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": "https://prod-30.northcentralus.logic.azure.com:443/workflows/41d21c3d7c6a442cbca758c8caad5a04/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=VyeL2T491WyfZtkfnNLlfH9kkJPnhJfpvWeEif8Uow0"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
