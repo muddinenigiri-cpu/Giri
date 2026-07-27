@@ -921,34 +921,65 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/trg_new1')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
+			"name": "[concat(parameters('factoryName'), '/stdio1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"annotations": [],
-				"runtimeState": "Stopped",
-				"pipeline": {
-					"pipelineReference": {
-						"referenceName": "trg2",
-						"type": "PipelineReference"
-					},
-					"parameters": {}
+				"linkedServiceName": {
+					"referenceName": "AzureDataLakeStorageGen2",
+					"type": "LinkedServiceReference"
 				},
-				"type": "TumblingWindowTrigger",
+				"annotations": [],
+				"type": "DelimitedText",
 				"typeProperties": {
-					"frequency": "Minute",
-					"interval": 15,
-					"startTime": "2026-07-26T10:12:00Z",
-					"delay": "00:00:00",
-					"maxConcurrency": 50,
-					"retryPolicy": {
-						"intervalInSeconds": 30
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"fileName": "test_data",
+						"folderPath": "GiRi_Folder/Folder2",
+						"fileSystem": "giri"
 					},
-					"dependsOn": []
-				}
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "First Name",
+						"type": "String"
+					},
+					{
+						"name": "Gender",
+						"type": "String"
+					},
+					{
+						"name": "Start Date",
+						"type": "String"
+					},
+					{
+						"name": "Last Login Time",
+						"type": "String"
+					},
+					{
+						"name": "Salary",
+						"type": "String"
+					},
+					{
+						"name": "Bonus %",
+						"type": "String"
+					},
+					{
+						"name": "Senior Management",
+						"type": "String"
+					},
+					{
+						"name": "Team",
+						"type": "String"
+					}
+				]
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/trg2')]"
+				"[concat(variables('factoryId'), '/linkedServices/AzureDataLakeStorageGen2')]"
 			]
 		}
 	]
